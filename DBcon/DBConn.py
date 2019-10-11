@@ -4,7 +4,11 @@ import psycopg2
 
 
 def main():
-        connection=psycopg2.connect(user="postgres",password="postgres",host="127.0.0.1",port="5432",database="postgres")
+        connection=psycopg2.connect(user="postgres",
+                                    password="postgres",
+                                    host="127.0.0.1",
+                                    port="5432",
+                                    database="postgres")
         cursor=connection.cursor()
         print (connection.get_dsn_parameters(),'\n')
         cursor.execute("select id,name from t")
